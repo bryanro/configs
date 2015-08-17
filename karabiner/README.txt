@@ -1,0 +1,1 @@
+File Location: /Users/Bryan/Library/Application Support/Karabiner/private.xml

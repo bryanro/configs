@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<root>
+  <appdef>
+    <appname>VMWARE</appname>
+    <equal>com.vmware.fusion</equal>
+  </appdef>
+  <appdef>
+    <appname>TextWrangler</appname>
+    <equal>com.barebones.textwrangler</equal>
+  </appdef>
+
+  <item>
+    <name>Open file in Finder with Return</name>
+    <only>FINDER</only>
+    <autogen>__KeyToKey__ KeyCode::RETURN,
+      KeyCode::O, ModifierFlag::COMMAND_L</autogen>
+    <identifier>private.openfilewithreturninfinder</identifier>
+  </item>
+  <item>
+    <name>Rename file in Finder with F2</name>
+    <only>FINDER</only>
+    <autogen>__KeyToKey__ KeyCode::F2,
+      KeyCode::RETURN</autogen>
+    <identifier>private.renamefilewithf2infinder</identifier>
+  </item>
+  <item>
+    <name>Shift-Capslock to Capslock</name>
+    <autogen>__KeyToKey__ KeyCode::F19, ModifierFlag::SHIFT_L,
+      KeyCode::CAPSLOCK</autogen>
+    <identifier>private.capslockwithshift</identifier>
+  </item>
+  <item>
+    <name>CapsLock to Command Space (assumption: CAPSLOCK mapped to F19) for non-VM</name>
+    <not>VMWARE</not>
+    <autogen>__KeyToKey__ KeyCode::F19, ModifierFlag::NONE,
+      KeyCode::SPACE, ModifierFlag::COMMAND_L</autogen>
+    <identifier>private.capslockcommandspace</identifier>
+  </item>
+  <item>
+    <name>CapsLock to Shift Option (assumption: CAPSLOCK mapped to F19) for VM</name>
+    <only>VMWARE</only>
+    <autogen>__KeyToKey__ KeyCode::F19, ModifierFlag::NONE,
+      KeyCode::SPACE, ModifierFlag::OPTION_L</autogen>
+    <identifier>private.capslockcontroloptionspace</identifier>
+  </item>
+  <item>
+    <name>Shift-F12 to F12</name>
+    <autogen>__KeyToKey__ KeyCode::F12, ModifierFlag::SHIFT_L, KeyCode::F12</autogen>
+    <not>VMWARE</not>
+    <identifier>private.shiftf12tof12</identifier>
+  </item>
+  <item>
+    <name>F12 to windows delete (forward delete)</name>
+    <autogen>__KeyToKey__ KeyCode::F12, ModifierFlag::NONE,
+    KeyCode::DELETE, ModifierFlag::FN</autogen>
+    <identifier>private.f12toforwarddelete</identifier>
+  </item>
+  <item>
+  	<name>Ctrl-F10 to Ctrl-Home Equivalent on Mac</name>
+  	<not>VMWARE</not>
+  	<autogen>__KeyToKey__ KeyCode::F10, ModifierFlag::CONTROL_L, KeyCode::CURSOR_LEFT, ModifierFlag::FN | ModifierFlag::COMMAND_L</autogen>
+  	<identifier>private.ctrlf10homenotvmware</identifier>
+  </item>
+  <item>
+  	<name>F10 to Home Equivalent on Mac</name>
+  	<not>VMWARE</not>
+  	<autogen>__KeyToKey__ KeyCode::F10, KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L</autogen>
+  	<identifier>private.f10homenotvmware</identifier>
+  </item>
+  <!--<item>
+  	<name>F10 to Home Equivalent in TextWranger</name>
+  	<only>TextWrangler</only>
+  	<autogen>__KeyToKey__ KeyCode::F10, KeyCode::HOME</autogen>
+  	<identifier>private.textwranglerf10home</identifier>
+  </item>
+  <item>
+  	<name>F11 to End Equivalent in TextWranger</name>
+  	<only>TextWrangler</only>
+  	<autogen>__KeyToKey__ KeyCode::F11, KeyCode::END</autogen>
+  	<identifier>private.textwranglerf11end</identifier>
+  </item>-->
+  <item>
+  	<name>Ctrl-F11 to Ctrl-End Equivalent on Mac</name>
+  	<not>VMWARE</not>
+  	<autogen>__KeyToKey__ KeyCode::F11, ModifierFlag::CONTROL_L, KeyCode::CURSOR_RIGHT, ModifierFlag::FN | ModifierFlag::COMMAND_L</autogen>
+  	<identifier>private.ctrlf11endnotvmware</identifier>
+  </item>
+  <item>
+  	<name>F11 to End Equivalent on Mac</name>
+  	<not>VMWARE</not>
+  	<autogen>__KeyToKey__ KeyCode::F11, KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L</autogen>
+  	<identifier>private.f11endnotvmware</identifier>
+  </item>
+  <item>
+    <name>F10 to Home on VMWare</name>
+    <only>VMWARE</only>
+    <autogen>__KeyToKey__ KeyCode::F10, KeyCode::HOME</autogen>
+    <identifier>private.f10tohomevmware</identifier>
+  </item>
+  <item>
+    <name>F11 to End on VMWare</name>
+    <only>VMWARE</only>
+    <autogen>__KeyToKey__ KeyCode::F11, KeyCode::END</autogen>
+    <identifier>private.f11toendvmware</identifier>
+  </item>
+  <item>
+    <name>Right Option to Right Control in VMWare</name>
+    <only>VMWARE</only>
+    <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::CONTROL_R</autogen>
+    <identifier>private.rightoptiontorightcontrol</identifier>
+  </item>
+  <item>
+  	<name>Disable Command-Q in VMWare</name>
+  	<only>VMWARE</only>
+  	<autogen>__KeyToKey__ KeyCode::Q, ModifierFlag::COMMAND_L,
+  		KeyCode::Q, ModifierFlag::CONTROL_L</autogen>
+  	<identifier>private.disablecommandqinvmware</identifier>
+  </item>
+</root>
