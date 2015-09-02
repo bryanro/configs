@@ -1,0 +1,22 @@
+# ALIASES
+alias l="ls -latr"
+alias restartDropbox="osascript -e 'tell application \"Dropbox\" to quit';killall Dropbox;open -a \"Dropbox\""
+alias ip="ipconfig getifaddr en0"
+alias sha256="shasum -a 256"
+alias showHidden="defaults write com.apple.finder AppleShowAllFiles YES"
+alias hideHidden="defaults write com.apple.finder AppleShowAllFiles NO"
+
+# ANDROID
+export ANDROID_HOME="/Applications/Android Studio.app/sdk"
+PATH=${PATH}:${ANDROID_HOME}/build-tools/19.0.1:${ANDROID_HOME}/platform-tools
+
+# ANDROID SDK
+export ANDROID_SDK="/users/bryan/android-sdk"
+PATH=${PATH}:${ANDROID_SDK}/platform-tools
+
+# GRADLE
+export GRADLE_HOME="/users/bryan/development/gradle/gradle-1.11"
+PATH=${PATH}:${GRADLE_HOME}/bin
+
+# Autojump
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
