@@ -5,6 +5,13 @@ alias ip="ipconfig getifaddr en0"
 alias sha256="shasum -a 256"
 alias showHidden="defaults write com.apple.finder AppleShowAllFiles YES"
 alias hideHidden="defaults write com.apple.finder AppleShowAllFiles NO"
+alias fixSwipe="killall Dock"
+
+# Terminal Prompt to $
+export PS1="\w $ "
+
+# DEFAULT TO /usr/local/bin BEFORE /usr/bin
+export PATH=/usr/local/bin:$PATH
 
 # ANDROID
 export ANDROID_HOME="/Applications/Android Studio.app/sdk"
@@ -17,6 +24,9 @@ PATH=${PATH}:${ANDROID_SDK}/platform-tools
 # GRADLE
 export GRADLE_HOME="/users/bryan/development/gradle/gradle-1.11"
 PATH=${PATH}:${GRADLE_HOME}/bin
+
+# JAVA
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
